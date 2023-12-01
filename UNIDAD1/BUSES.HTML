@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MAC.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title></title>
+</head>
+<body class="cuerpo">
+    <div class="header" >
+        <h1 class="titulo" style="color: azure;">Arquitectura de computadoras</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <a href="../main.html"><button type="button" class="btn btn-light" style="margin-left: 45%;">ATRAS</button></a>
+              </div>
+              <div class="col-8">
+                <h3 class="titulo2" style="color: black;">UNIDAD I</h3>
+              </div>
+              <div class="col-2">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="body">
+        <H3>1.2.4 BUSES</H3>
+        <p class="text"> En arquitectura de computadores, el bus es un sistema digital que transfiere datos entre los componentes de una computadora. Está formado por cables o pistas en un circuito impreso, dispositivos como resistores y condensadores, además de circuitos integrados.</p>
+        <p class="text">Un bus es una trayectoria por la cual viajan los datos en una computadora para comunicar los distintos dispositivos entre sí. Los principales buses que se encuentran dentro de una PC son: los Buses del micro-procesador, los Buses de memoria y los Buses del sistema.</p>
+        <H5>1.2.4.1 Tipos de buses</H5>
+        <p>Existen dos tipos de transferencia en los buses:</p>
+        <ul class="indt"> <li>Serie: El bus solamente es capaz de transferir los datos bit a bit. El bus tiene un único cable que transmite la información.</li> <li>  Paralelo: El bus permite transferir varios bits simultáneamente, por ejemplo 8 bits.</li></ul>
+
+        <p class="text">Aunque en primera instancia parece mucho más eficiente la transferencia en paralelo, esta presenta inconvenientes: </p>
+        <ul class="indt"><li> La frecuencia de reloj en el bus paralelo tiene que ser más reducida.</li><li> La longitud de los cables que forman el bus está limitada por las posibles interferencias, el ruido y los retardos en la señal.</li></ul>
+
+        <p class="text">Además, los modernos buses serie están formados por varios canales: En este caso se transmite por varios buses serie simultáneamente.</p>
+        <p class="text">En los primeros computadores electrónicos, era muy habitual encontrar buses paralelos, quedando los buses serie dedicados para funciones de menor entidad y dispositivos lentos, como el teclado. La tendencia en los últimos años es reemplazar los buses paralelos por buses serie (que suelen ser multicanal).  Estos son más difíciles de implementar, pero están dejando velocidades de transferencia más elevadas, además de permitir longitudes de cable mayores. </p>
+        <h5>1.2.4.3 Estructura de los buses</h5>
+        <p class="text">Un bus es un medio compartido de comunicación constituido por un conjunto de líneas (conductores) que conecta las diferentes unidades de un computador. La principal función de un bus será, pues, servir de soporte para la realización de transferencias de información entre dichas unidades. La unidad que inicia y controla la transferencia se conoce como master del bus para dicha transferencia, y la unidad sobre la que se realiza la transferencia se conoce como slave. Los papeles de master y slave son dinámicos, de manera que una misma unidad puede realizar ambas funciones en transferencias diferentes. Por ejemplo, una unidad de DMA hace de slave en la inicialización que realiza el master, la CPU, para una operación de E/S. Sin embargo, cuando comienza la operación, la unidad de DMA juega el papel de master frente a la memoria, que en esta ocasión hace de slave.</p>
+        <p class="text">Para garantizar el acceso ordenado al bus, existe un sistema de arbitraje, centralizado o distribuido, que establece las prioridades cuando dos o más unidades pretenden acceder al mismo tiempo al bus, es decir, garantiza que en cada momento sólo exista un master. Para establecer el tiempo de duración de las transferencias y que sea conocido tanto por el master como por el slave, un bus debe disponer de los medios necesarios para la sincronización master-slave. </p>
+        <h5>1.2.4.4 Jerarquia de los buses</h5>
+        <p class="text">Los computadores modernos tienen por lo menos 4 buses diferentes (bus interno, bus del procesador, bus del caché, bus de memoria, bus local de E/S, bus estándar de E/S). Se les considera una jerarquía, porque cada bus se conecta al nivel superior a él dentro del computador, integrando así todas las partes del computador. Cada uno es generalmente más lento que el que se encuentra sobre él, siendo el bus del procesador el más rápido tratándose de que este es el dispositivo más rápido del computador. Para mejorar el rendimiento del bus, las jerarquías de buses fueron implementadas cada vez más. </p>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./u2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title></title>
+</head>
+<body class="cuerpo">
+    <div class="header" >
+        <h1 class="titulo" style="color: azure;">Arquitectura de computadoras</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <a href="../main.html"><button type="button" class="btn btn-light" style="margin-left: 45%;">ATRAS</button></a>
+              </div>
+              <div class="col-8">
+                <h3 class="titulo2" style="color: black;">UNIDAD II</h3>
+              </div>
+              <div class="col-2">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="body">
+        <H3>2.3 El Ciclón de Instrucciones </H3>
+        <H5>Ciclos de computadora</H5>
+        <p class="text">La búsqueda es el proceso de obtener instrucciones de un programa o un elemento de datos de la memoria. El término decodificar se refiere al proceso de traducir las instrucciones a señales que la computadora puede ejecutar. <br> Ejecutar es el proceso de llevar a cabo los comandos. Almacenamiento en este contexto significa escribir el resultado a la memoria. <br> </p>
+        <p class="text">En algunas computadoras, el procesador busca, decodifica, ejecuta y almacena solo una instrucción a la vez. En estas computadoras el procesador espera hasta que una instrucción completa las cuatro etapas del ciclo antes de iniciar a trabajar con la siguiente instrucción.</p>
+        <p class="text">Hoy día la mayoría de las computadoras personales soportan un concepto llamado pipelining: <br> Con pipelining los procesadores inician la búsqueda de una segunda instrucción antes de que se haya completado el ciclo de la computadora de la primera instrucción. Los procesadores que cuentan con pipelining habilitado son más rápidos en el procesamiento porque no tienen que esperar para que una instrucción complete el ciclo de computadora antes de buscar la siguiente. </p>
+        <H5>2.3.1 Ciclo Fetch-Decode-Execute</H5>
+        <p class="text">El encargado de ejecutar un programa en una computadora u otro sistema computacional es el CPU, lo realiza siguiendo el llamado ciclo Fetch Decode Execute, con este ciclo se ejecutan todas las tareas que una computadora puede realizar.<br> Este ciclo tiene algunas variantes y conforme ha avanzado el tiempo y la tecnología ha sufrido algunos cambios, pero el ciclo básico se conforma de las siguientes etapas:</p>
+        <ul class="indt"> <li>Traer la instrucción: Se obtiene la instrucción desde memoria y se almacena en el registro del CPU para instrucciones.</li><li>Decodificar la instrucción: Se identifica el modo de direccionamiento de la instrucción y la ubicación de los datos a tratar, ya sea de </li> <li> memoria, registro o instrucción directamente.</li> <li>Carga de Parámetros: Se ejecuta la lectura, cargando todos los datos identificados en el paso anterior.</li><li>Ejecutar: Se ejecuta la instrucción ya configurada, realiza la tarea indicada, ya sea una suma, resta, almacenar información, extraer </li> <li>información etc.</li> <li>Almacenar: Se almacena el resultado obtenido de ejecutar la instrucción, por ejemplo, el resultado de una suma o un índice (Número)</li><li>como resultado de éxito de almacenar u obtener información de un archivo, entre otros.</li><li>Actualizar PC: Esta etapa es la de actualizar el registro PC (Program Counter) que contiene la siguiente dirección a ejecutar.</li></ul>
+
+        <p class="text"> Evidentemente al ser un ciclo estas etapas se repiten constantemente durante el funcionamiento de la computadora.  </p>
+        <p class="text">Se debe considerar que el ciclo expuesto anteriormente es muy básico. Como se mencionaba hoy en día estos ciclos han tenido algunas alteraciones y optimizado de gran manera, como se sabe los sistemas de hoy en día son multitareas, lo cual conlleva a una alteración en este ciclo, además de las diferentes técnicas para reducir el tiempo de ejecución de instrucciones con temas de concurrencia y paralelismo en los procesadores modernos.</p>
+        <p class="text">El ciclo expuesto nos muestra un poco la forma en la que las computadoras funcionan, todo el proceso que conlleva ejecutar una instrucción que puede parecer muy simple, además este ciclo básico permite darse una idea de cómo ha evolucionado los procesadores y las técnicas para reducir el tiempo de ejecución dado que los sistemas actuales ejecutan de forma simultánea muchas veces este ciclo, siendo este modificado y más eficiente.</p>
+
+        <H5>2.3.2 Segmentación de Instrucciones</H5>
+        <p class="text">La segmentación (en inglés pipelining, literalmente 'tubería' o 'cañería', o data pipeline)​ es un método por el cual se consigue aumentar el rendimiento de algunos sistemas electrónicos digitales. Se usa principalmente en los microprocesadores.</p>
+        <p class="text">El nombre, por analogía, viene de que para impulsar el gas en un oleoducto a la máxima velocidad posible es necesario dividir el oleoducto en tramos y colocar una bomba que dé un nuevo impulso al gas. </p>
+        <p class="text">El símil con la programación existe en que los cálculos deben ser registrados o sincronizados con el reloj cada cierto tiempo para que la ruta crítica (tramo con más carga o retardo computacional entre dos registros de reloj) se reduzca. <br> </p>
+        <p class="text">La ruta crítica es en realidad la frecuencia máxima de trabajo alcanzada por el conjunto. A mayor ruta crítica (tiempo o retraso entre registros) menor es la frecuencia máxima de trabajo y a menor ruta crítica mayor frecuencia de trabajo. La una es la inversa de la otra. Repartir o segmentar equitativamente el cálculo hace que esa frecuencia sea la óptima a costa de más área para el almacenamiento o registro de los datos intervinientes y de un retraso o latencia (en ciclos de reloj/tiempo) en la salida del resultado equivalente al número de segmentaciones o registros realizados.</p>
+        <p class="text">La ventaja primordial de este sistema es que, tal y como se muestra en la imagen, una vez el canal (pipe) está lleno, es decir, después de una latencia de cuatro en la imagen, los resultados de cada comando vienen uno tras otro cada flanco de reloj y sin latencia extra por estar encadenados dentro del mismo canal. Todo esto habiendo maximizado la frecuencia máxima de trabajo. </p>
+
+        <h5>2.3.3 Conjunto de Instrucciones</h5>
+        <p class="text">Un conjunto de instrucciones o repertorio de instrucciones, juego de instrucciones o ISA (del inglés Instruction Set Architecture, Arquitectura del Conjunto de Instrucciones) es una especificación que detalla las instrucciones que una CPU de un ordenador puede entender y ejecutar, o el conjunto de todos los comandos implementados por un diseño particular de una CPU. </p>
+        <p class="text">El término describe los aspectos del procesador generalmente visibles a un programador, incluyendo los tipos de datos nativos, las instrucciones, los registros, la arquitectura de memoria y las interrupciones, entre otros aspectos.</p>
+        <p class="text">Existe principalmente de 3 tipos: CISC (Complex Instruction Set Computer), RISC (Reduced Instruction Set Computer) y SISC (Specific Instruction Set Computer).</p>
+        <p class="text">La arquitectura del conjunto de instrucciones (ISA) se emplea a veces para distinguir este conjunto de características de la microarquitectura, que son los elementos y técnicas que se emplean para implementar el conjunto de instrucciones. Entre estos elementos se encuentras las microinstrucciones y los sistemas de caché. <br> Procesadores con diferentes diseños internos pueden compartir un conjunto de instrucciones; por ejemplo el Intel Pentium y AMD Athlon implementan versiones casi idénticas del conjunto de instrucciones x86, aunque tienen diseños internos completamente opuestos.</p>
+
+    </div>  
+</body>
+</html>

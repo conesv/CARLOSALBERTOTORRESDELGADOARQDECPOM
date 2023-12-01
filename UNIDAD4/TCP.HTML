@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./U4.CSS">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title></title>
+</head>
+<body class="cuerpo">
+    <div class="header" >
+        <h1 class="titulo" style="color: azure;">Arquitectura de computadoras</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <a href="../main.html"><button type="button" class="btn btn-light" style="margin-left: 45%;">ATRAS</button></a>
+              </div>
+              <div class="col-8">
+                <h3 class="titulo2" style="color: black;">UNIDAD IV</h3>
+              </div>
+              <div class="col-2">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="body">
+        <H3>4.2 Tipos de Computación Paralela</H3>
+        <H5>Paralelismo a nivel de bit        </H5>
+        <P>Desde el advenimiento de la integración a gran escala (VLSI) como tecnología de fabricación de chips de computadora en la década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo.</P>
+        <P>Históricamente, los microprocesadores de 4 bits fueron sustituidos por unos de 8 bits, luego de 16 bits y 32 bits, esta tendencia general llegó a su fin con la introducción de procesadores de 64 bits, lo que ha sido un estándar en la computación de propósito general durante la última década.
+        </P>
+        <H5>Paralelismo a nivel de instrucción</H5>
+        <p>Los procesadores modernos tienen ''pipeline'' de instrucciones de varias etapas. Cada etapa en el pipeline corresponde a una acción diferente que el procesador realiza en la instrucción correspondiente a la etapa; un procesador con un pipeline de N etapas puede tener hasta n instrucciones diferentes en diferentes etapas de finalización.
+        </p>
+        <h5>Paralelismo de datos
+        </h5>
+        <p>El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos entre los diferentes nodos computacionales que deben tratarse en paralelo. Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+        </p>
+        <p>Una dependencia de terminación de ciclo es la dependencia de una iteración de un ciclo en la salida de una o más iteraciones anteriores. Las dependencias de terminación de ciclo evitan la paralelización de ciclos.
+        </p>
+        <h5>Paralelismo de tareas
+        </h5>
+        <p>Es un paradigma de la programación concurrente que consiste en asignar distintas tareas a cada uno de los procesadores de un sistema de cómputo. En consecuencia, cada procesador efectuará su propia secuencia de operaciones. En su modo más general, el paralelismo de tareas se representa mediante un grafo de tareas, el cual es subdividido en subgrafos que son luego asignados a diferentes procesadores.</p>
+        <h5>4.2.1 Clasificación
+        </h5>
+        <p>Las computadoras paralelas se pueden clasificar de acuerdo con el nivel en el que el hardware soporta paralelismo. Esta clasificación es análoga a la distancia entre los nodos básicos de cómputo.
+
+        </p>
+        <p>
+            Computación multinúcleo: un procesador multinúcleo es un procesador que incluye múltiples unidades de ejecución (núcleos) en el mismo chip.</p>
+        <p>Multiprocesamiento simétrico: un multiprocesador simétrico (SMP) es un sistema computacional con múltiples procesadores idénticos que comparten memoria y se conectan a través de un bus.
+
+        </p>
+        <p>Computación en clúster: un clúster es un grupo de ordenadores débilmente acoplados que trabajan en estrecha colaboración, de modo que en algunos aspectos pueden considerarse como un solo equipo.
+
+        </p>
+        <p>Procesamiento paralelo masivo: tienden a ser más grandes que los clústeres, con «mucho más» de 100 procesadores.
+
+        </p>
+        <p>Computación distribuida: la computación distribuida es la forma más distribuida de la computación paralela. Se hace uso de ordenadores que se comunican a través de la Internet para trabajar en un problema dado.
+
+        </p>
+        <p>Circuitos integrados de aplicación específica: debido a que un ASIC (por definición) es específico para una aplicación dada, puede ser completamente optimizado para esa aplicación.
+
+        </p>
+        <p>Procesadores vectoriales: pueden ejecutar la misma instrucción en grandes conjuntos de datos.
+
+        </p>
+        <h5>4.2.2 Arquitectura de Computadoras Secuenciales
+        </h5>
+        <p>A diferencia de los sistemas combinacionales, en los sistemas secuenciales, los valores de las salidas, en un momento dado, no dependen exclusivamente de los valores de las entradas en dicho momento, sino también dependen del estado anterior o estado interno.
+
+        </p>
+        <p>El sistema secuencial requiere de la utilización de un dispositivo de memoria que pueda almacenar la historia pasada de sus entradas (denominadas variables de estado) y le permita mantener su estado durante algún tiempo, estos dispositivos de memoria pueden ser sencillos como un simple retardador o celdas de memoria de tipo DRAM, SRAM o multivibradores biestables también conocido como Flip-Flop.
+
+        </p>
+        <h5>Tipos de sistemas secuenciales
+        </h5>
+        <p>En este tipo de circuitos entra un factor que no se había considerado en los circuitos combinacionales, dicho factor es el tiempo, según como manejan el tiempo se pueden clasificar en: circuitos secuenciales síncronos y circuitos secuenciales asíncronos.
+
+        </p>
+        <h5>Circuitos secuenciales asíncronos
+        </h5>
+        <p>En circuitos secuenciales asíncronos los cambios de estados ocurren al ritmo natural asociado a las compuertas lógicas utilizadas en su implementación, lo que produce retardos en cascadas entre los biestables del circuito, es decir no utilizan elementos especiales de memoria, lo que puede ocasionar algunos problemas de funcionamiento, ya que estos retardos naturales no están bajo el control del diseñador y además no son idénticos en cada compuerta lógica.
+
+        </p>
+        <h5>Circuitos secuenciales síncronos
+        </h5>
+        <p>Los circuitos secuenciales síncronos solo permiten un cambio de estado en los instantes marcados o autorizados por una señal de sincronismo de tipo oscilatorio denominada reloj (cristal o circuito capaz de producir una serie de pulsos regulares en el tiempo), lo que soluciona los problemas que tienen los circuitos asíncronos originados por cambios de estado no uniformes dentro del sistema o circuito.
+
+        </p>
+        <h5>4.2.3 Organización de Direcciones de Memoria
+        </h5>
+        <p>La memoria principal en un ordenador en paralelo puede ser compartida —compartida entre todos los elementos de procesamiento en un único espacio de direcciones—, o distribuida —cada elemento de procesamiento tiene su propio espacio local de direcciones—.El término memoria distribuida se refiere al hecho de que la memoria se distribuye lógicamente, pero a menudo implica que también se distribuyen físicamente.
+        </p>
+        <p>Los accesos a la memoria local suelen ser más rápidos que los accesos a memoria no local. Las arquitecturas de ordenador en las que cada elemento de la memoria principal se puede acceder con igual latencia y ancho de banda son conocidas como arquitecturas de acceso uniforme a memoria (UMA).
+
+        </p>
+        <p>Un sistema que no tiene esta propiedad se conoce como arquitectura de acceso a memoria no uniforme (NUMA). Los sistemas de memoria distribuidos tienen acceso no uniforme a la memoria.
+
+        </p>
+        </div>  
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./U4.CSS">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title></title>
+</head>
+<body class="cuerpo">
+    <div class="header" >
+        <h1 class="titulo" style="color: azure;">Arquitectura de computadoras</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <a href="../main.html"><button type="button" class="btn btn-light" style="margin-left: 45%;">ATRAS</button></a>
+              </div>
+              <div class="col-8">
+                <h3 class="titulo2" style="color: black;">UNIDAD IV</h3>
+              </div>
+              <div class="col-2">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="body">
+        <H3>4.1 Aspectos Básicos de la Computación Paralela</H3>
+        <p class="text">La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente (en paralelo). Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, paralelismo de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, sobre todo en la computación de altas prestaciones, pero el interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden el aumento de la frecuencia. Como el consumo de energía y por consiguiente la generación de calor de las computadoras constituye una preocupación en los últimos años, la computación en paralelo se ha convertido en el paradigma dominante en la arquitectura de computadores, principalmente en forma de procesadores multinúcleo.</p>
+        <p class="text">Los programas informáticos paralelos son más difíciles de escribir que los secuenciales, porque la concurrencia introduce nuevos tipos de errores de software, siendo las condiciones de carrera los más comunes. La comunicación y sincronización entre diferentes subtareas son algunos de los mayores obstáculos para obtener un buen rendimiento del programa paralelo. La máxima aceleración posible de un programa como resultado de la paralelización se conoce como la ley de Amdahl.</p>
+        <H5>Ley de Amdahl y Ley de Gustafson        </H5>
+        <p class="text">Idealmente, la aceleración a partir de la paralelización es lineal, doblar el número de elementos de procesamiento debe reducir a la mitad el tiempo de ejecución y doblarlo por segunda vez debe nuevamente reducir el tiempo a la mitad. Sin embargo, muy pocos algoritmos paralelos logran una aceleración óptima. La mayoría tienen una aceleración casi lineal para un pequeño número de elementos de procesamiento, y pasa a ser constante para un gran número de elementos de procesamiento.</p>
+        <p class="text">La aceleración potencial de un algoritmo en una plataforma de cómputo en paralelo está dada por la ley de Amdahl, formulada originalmente por Gene Amdahl en la década de 1960. Esta señala que una pequeña porción del programa que no pueda paralelizarse va a limitar la aceleración que se logra con la paralelización.</p>
+        <p class="text">La ley de Gustafson es otra ley en computación que está en estrecha relación con la ley de Amdahl. Ambas leyes asumen que el tiempo de funcionamiento de la parte secuencial del programa es independiente del número de procesadores. La ley de Amdahl supone que todo el problema es de tamaño fijo, por lo que la cantidad total de trabajo que se hará en paralelo también es independiente del número de procesadores, mientras que la ley de Gustafson supone que la cantidad total de trabajo que se hará en paralelo varía linealmente con el número de procesadores.</p>
+        <H5>Dependencias</H5>
+        <p class="text">Entender la dependencia de datos es fundamental en la implementación de algoritmos paralelos. Ningún programa puede ejecutar más rápidamente que la cadena más larga de cálculos dependientes (conocida como la ruta crítica), ya que los cálculos que dependen de cálculos previos en la cadena deben ejecutarse en orden. Sin embargo, la mayoría de los algoritmos no consisten sólo de una larga cadena de cálculos dependientes; generalmente hay oportunidades para ejecutar cálculos independientes en paralelo.</p>
+        <H5>Condiciones de carrera, exclusión mutua, sincronización, y desaceleración paralela.</H5>
+        <P>Las subtareas en un programa paralelo a menudo son llamadas hilos. Algunas arquitecturas de computación paralela utilizan versiones más pequeñas y ligeras de hilos conocidas como hebras, mientras que otros utilizan versiones más grandes conocidos como procesos. Sin embargo, «hilos» es generalmente aceptado como un término genérico para las subtareas. Los hilos a menudo tendrán que actualizar algunas variables que se comparten entre ellos. Las instrucciones entre los dos programas pueden entrelazarse en cualquier orden.        </P>
+        <H5>Grado de paralelismo:</H5>
+        <ul class="indt"><li>Muy grueso: Programas.</li><li>Grueso: Subprogramas, tareas.</li><li>Fino: Instrucción.</li><li>Muy fino: Fases de instrucción.</li></ul>
+        <H5>Modelos de consistencia.</H5>
+        <P>Los lenguajes de programación en paralelo y computadoras paralelas deben tener un modelo de consistencia de datos también conocido como un modelo de memoria. El modelo de consistencia define reglas para las operaciones en la memoria del ordenador y cómo se producen los resultados.        </P>
+        <P>Uno de los primeros modelos de consistencia fue el modelo de consistencia secuencial de Leslie Lamport. La consistencia secuencial es la propiedad de un programa en la que su ejecución en paralelo produce los mismos resultados que un programa secuencial.        </P>
+        <H5>Single Instruction, Single Data (SISD)        </H5>
+        <P>Hay un elemento de procesamiento, que tiene acceso a un único programa y a un almacenamiento de datos. En cada paso, el elemento de procesamiento carga una instrucción y la información correspondiente y ejecuta esta instrucción. El resultado es guardado de vuelta en el almacenamiento de datos. Luego SISD es el computador secuencial convencional, de acuerdo al modelo de von Neumann.        </P>
+        <H5>Multiple Instruction, Single Data (MISD)        </H5>
+        <P>Hay múltiples elementos de procesamiento, en el que cada cual tiene memoria privada del programa, pero se tiene acceso común a una memoria global de información. En cada paso, cada elemento de procesamiento de obtiene la misma información de la memoria y carga una instrucción de la memoria privada del programa. Este modelo es muy restrictivo y no se ha usado en ningún computador de tipo comercial.        </P>
+        <H5>Single Instruction, Multiple Data (SIMD)        </H5>
+        <P>Hay múltiples elementos de procesamiento, en el que cada cual tiene acceso privado a la memoria de información (compartida o distribuida). Sin embargo, hay una sola memoria de programa, desde la cual una unidad de procesamiento especial obtiene y despacha instrucciones. En cada paso, cada unidad de procesamiento obtiene la misma instrucción y carga desde su memoria privada un elemento de información y ejecuta esta instrucción en dicho elemento. Para aplicaciones con un grado significante de paralelismo de información, este acercamiento puede ser muy eficiente.</P>
+        <H5>Multiple Instruction, Multiple Data (MIMD)        </H5>
+        <P>Hay múltiples unidades de procesamiento, en la cual cada una tiene tanto instrucciones como información separada. Cada elemento ejecuta una instrucción distinta en un elemento de información distinto. Los elementos de proceso trabajan asíncronamente. Los clusters son ejemplo son ejemplos del modelo MIMD.
+        </P>
+
+    </div>  
+    
+</body>
+</html>

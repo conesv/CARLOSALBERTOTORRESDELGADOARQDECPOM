@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MAC.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title></title>
+</head>
+<body class="cuerpo">
+    <div class="header" >
+        <h1 class="titulo" style="color: azure;">Arquitectura de computadoras</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <a href="../main.html"><button type="button" class="btn btn-light" style="margin-left: 45%;">ATRAS</button></a>
+              </div>
+              <div class="col-8">
+                <h3 class="titulo2" style="color: black;">UNIDAD I</h3>
+              </div>
+              <div class="col-2">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="body">
+        <h3>1.2.3 Manejo de Entrada/Salida</h3>
+        <h5>1.2.3.1 Módulos E/S</h5>
+        <p class="text">Para poder hacer una operación entre el procesador y un periférico, se necesita conectar estos dispositivos a la computadora y gestionar de manera correcta la transferencia de datos. Esto, se puede realizar mediante los sistemas de módulos de Entrada/Salida. Estos módulos están conectados con el procesador y la memoria principal, cada uno controla uno o más dispositivos externos.</p>
+        <h5>1.2.3.2 E/S Programada</h5>
+        <p class="text">La entrada-salida programada (también entrada / salida programada , E / S programada , PIO ) es un método de transmisión de datos , a través de entrada / salida (E / S), entre una unidad central de procesamiento (CPU) y un dispositivo periférico , como un adaptador de red o un dispositivo de almacenamiento Parallel ATA (PATA, anteriormente AT Attachment (ATA)). Cada transferencia de elementos de datos se inicia mediante una instrucción en el programa, que involucra a la CPU para cada transacción. Por el contrario, en las operaciones de acceso directo a memoria (DMA), la CPU no participa en la transferencia de datos. </p>
+        <p class="text">El término puede referirse a E / S mapeadas en memoria (MMIO) o E / S mapeadas en puertos (PMIO). PMIO se refiere a transferencias que utilizan un espacio de direcciones especial fuera de la memoria normal, al que generalmente se accede con instrucciones dedicadas, comoEN y FUERAen arquitecturas x86 . MMIO [1] se refiere a transferencias a dispositivos de E / S que están mapeados en el espacio de direcciones normal disponible para el programa. PMIO fue muy útil para los primeros microprocesadores con espacios de direcciones pequeños, ya que los dispositivos de E / S no consumían el valioso recurso.</p>
+        <h5>1.2.3.3 E/S Meduante Interrupciones</h5>
+        <p class="text">Esta técnica pretende evitar que el procesador pare o haga trabajo improductivo, mientras que espera a que el periférico esté preparado para hacer una nueva operación. El hardware de la computadora, necesita tener un conjunto de líneas de control del bus del sistema y de petición de interrupción.</p>
+
+        <p class="text">El procesador ejecuta instrucciones de un programa. Al finalizar cada instrucción comprueba si se ha producido una interrupción.</p>
+        <p class="text">En caso afirmativo se salva el estado actual del programa (contador del programa y registros) y se salta a ejecutar la rutina de servicio correspondiente.</p>
+        <p class="text">La rutina de servicio efectúa las operaciones apropiadas en la E/S para realizar la transferencia de datos solicitada. </p>
+        <p class="text">Al finalizar la rutina de servicio se recupera el estado de la CPU y se continúa ejecutando el programa que se estaba ejecutando antes de la interrupción.</p>
+
+        <h5>Las interrupciones pueden ser:</h5>
+        <ul class="indt"><li>ENMASCARABLES (se pueden dejar de atender por software)</li><li>NO ENMASCARABLES (siempre atendidas)</li><li>Dos formas de conocer la dirección/posición (vector) donde se encuentra la rutina de servicio de la interrupción</li><li>Vector de interrupciones siempre FIJO ó el periférico suministra el vector de interrupción</li></ul>
+        <h5>1.2.3.4 Acceso directo a memoria</h5>
+        <p class="text">El DMA (acceso directo a la memoria) permite que el dispositivo de red mueva los datos del paquete directamente a la memoria del sistema, reduciendo la utilización de la CPU. Sin embargo, la frecuencia y los intervalos aleatorios en los cuales los paquetes llegan no permiten que el sistema ingrese un estado de energía más bajo. El coalescentes DMA permite que el NIC recoja los paquetes antes de que inicie un evento DMA. Esto puede aumentar la latencia de la red, pero también aumenta las probabilidades de que el sistema consuma menos energía. Los adaptadores y dispositivos de red basados en el controlador Ethernet Intel® I350 (y controladores posteriores) Asistencia la fusión de DMA.</p>
+        <p class="text">Los valores coalescentes más altos de DMA resultan en más energía guardada, pero pueden aumentar la latencia de red de su sistema. Si habilita la coalescación de DMA, también debe establecer la tasa de moderación de interrupciones en "mínimo". Esto minimiza el impacto de latencia impuesto por la coalescencia de DMA y da como resultado un mejor rendimiento de rendimiento de red máximo. Debe habilitar la coalescencia de DMA en todos los puertos activos del sistema. Usted no puede ganar ningún ahorro de energía si se habilita sólo en algunos de los puertos en su sistema. También hay varias configuraciones de BIOS, plataformas y aplicaciones que afectarán a su potencial ahorro energético.</p>
+
+        <h5>1.2.3.5 Canales de E/S</h5>
+        <p class="text">EL canal de E/S es una extensión del bus del 8088. Este canal contiene un bus de datos bidireccinal de 8 bits, 20 líneas de dirección, 6 niveles de interrupción, líneas de control para las operaciones de lectura y escritura para la memoria y la E/S, líneas de control de 3 canales de DMA, y líneas de control para el tiempo de refresco de memoria.</p>
+        <p class="text">Los canales de E/S proporcionan una línea Ready para permitir operaciones con dispositivos de memoria o de E/S lentos. Cuando la línea no está activada por un dispositivo, el procesador genera ciclos de lectura y esritura a memoria que toman cuatro ciclos de 210 ns (esto es, 840 ns) por byte. Todos los ciclos de lectura y escritura a E/S generados por el procesador requieren de cinco ciclos de 210 ns de reloj (1.05 ms) por byte. Todas las transferencias DMA requieren de cinco ciclos de reloj para un ciclo de tiempo de 1.05 ms por byte. Los ciclos de reloj se presentan aproximadamente cada 15 m sec y requieren de cinco ciclos de reloj.</p>
+        <p class="text">Los dispositivos de E/S están direccionados utilizando un mapeo de E/S con el espacio de direccionamiento. El canal proporciona a las tarjetas de E/S 512 direcciones de dispositivos.</p>
+
+    </div>  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./U4.CSS">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title></title>
+</head>
+<body class="cuerpo">
+    <div class="header" >
+        <h1 class="titulo" style="color: azure;">Arquitectura de computadoras</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-2">
+                <a href="../main.html"><button type="button" class="btn btn-light" style="margin-left: 45%;">ATRAS</button></a>
+              </div>
+              <div class="col-8">
+                <h3 class="titulo2" style="color: black;">UNIDAD IV</h3>
+              </div>
+              <div class="col-2">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="body">
+        <H3>4.3 Sistemas de Memoria Compartida</H3>
+        <ul class="indt"> <li>Todos los procesadores acceden a una memoria común.</li><li>La comunicación entre procesadores se hace a través de la memoria.</li><li>Se necesitan primitivas de sincronismo para asegurar el intercambio de datos.</li></ul>
+        <h5>Estructura de los multiprocesadores de memoria compartida</h5>
+        <p>La mayoría de los multiprocesadores comerciales son del tipo UMA (Uniform Memory Access): todos los procesadores tienen igual tiempo de acceso a la memoria compartida. En la arquitectura UMA los procesadores se conectan a la memoria a través de un bus, una red multietapa o un conmutador de barras cruzadas (crossbar crossbar) y disponen de su propia memoria caché. Los procesadores tipo NUMA (Non Uniform Memory Access) presentan tiempos de acceso a la memoria compartida que dependen de la ubicación del elemento de proceso y la memoria.
+        </p>
+        <h5>4.3.1 Redes de Interconexión Dinámicas ó Indirectas
+        </h5>
+        <p>Medio compartido.
+            Conexión por bus compartido.</p>
+          <p>Es la organización más común en los computadores personales y servidores.
+          </p>  
+          <p>
+            El bus consta de líneas de dirección, datos y control para implementar:
+          </p>
+          <ul class="indt"><li>El protocolo de transferencias de datos con la memoria.</li><li>El arbitraje del acceso al bus cuando más de un procesador compite por utilizarlo.</li></ul>
+          <h5>Los procesadores utilizan cachés locales para:
+          </h5>
+          <ul class="indt"><li>Reducir el tiempo medio de acceso a memoria, como en un monoprocesador.</li><li>Disminuir la utilización del bus compartido.</li></ul>
+          <h5>Protocolos de transferencia de ciclo partido        </h5>
+          <p class="text">La operación de lectura se divide en dos transacciones no continuas de acceso al bus. La primera es de petición de lectura que realiza el máster (procesador) sobre el slave (memoria). Cuando el slave dispone del dato leído, inicia un ciclo de bus actuando como máster para enviar el dato al antiguo máster, que ahora actúa como slave.</p>
+          <h5>Protocolo de arbitraje distribuido
+        </h5>
+        <p class="text">La responsabilidad del arbitraje se distribuye por los diferentes procesadores conectados al bus.</p>
+        <h5>4.3.1.2 Redes Conmutadas
+        </h5>
+        <p class="text">Conexión por conmutadores crossbar.</p>
+        <p class="text">Cada procesador (Pi) y cada módulo de memoria (Mi) tienen su propio bus. Existe un conmutador (S) en los puntos de intersección que permite conectar un bus de memoria con un bus de procesador. Para evitar conflictos cuando más de un procesador pretende acceder al mismo módulo de memoria se establece un orden de prioridad.</p>
+        <h5>Conexión por red multietapa.
+        </h5>
+        <ul class="indt"><li>Representan una alternativa intermedia de conexión entre el bus y el crossbar.</li><li>Es de menor complejidad que el crossbar pero mayor que el bus simple.</li><li>La conectividad es mayor que la del bus simple pero menor que la del crossbar.</li><li>Se compone de varias etapas alternativas de conmutadores simples y redes de interconexión.</li></ul>
+        
+    </div>  
+    
+</body>
+</html>
